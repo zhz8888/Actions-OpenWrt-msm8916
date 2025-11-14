@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/xuxin1955/immortalwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: r1c.config
@@ -146,10 +146,10 @@ jobs:
         echo "release_tag=$(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
         touch release.txt
         [ ${UPLOAD_GOFILE} = true && ${{ steps.gofile.outputs.url }} ] && echo "🔗 [GoFile](${{ steps.gofile.outputs.url }})" >> release.txt
-        echo "## LEDE-openwrt24.10-X84-64" >> release.txt
+        echo "## immortalwrt24.10-r1c-ramips" >> release.txt
         echo "- 管理地址:192.168.1.1" >> release.txt
         echo "  默认用户:root" >> release.txt
-        echo "  默认密码:password" >> release.txt
+        echo "  默认密码:空" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: Upload firmware to release
