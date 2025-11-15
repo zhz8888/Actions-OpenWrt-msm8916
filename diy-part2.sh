@@ -38,11 +38,11 @@ sed -i 's/luci-theme-material/luci-theme-argon/g' feeds/luci/collections/luci/Ma
 # CONFIG_QCOM_IPA=m
 # EOF
 
-# cat <<EOF >> target/linux/msm89xx/config-6.12
+cat <<EOF >> target/linux/msm89xx/config-6.12
 
-# CONFIG_BT_QCOMSMD=m
-# CONFIG_QCOM_IPA=m
-# EOF
+CONFIG_BT_QCOMSMD=m
+CONFIG_QCOM_IPA=m
+EOF
 
 # HelmiWrt packages
-# git clone --depth=1 https://github.com/Haris131/helmiwrt-packages package/community
+git clone --depth=1 https://github.com/Haris131/helmiwrt-packages package/community
