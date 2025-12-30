@@ -18,5 +18,11 @@
 git clone https://github.com/chenmozhijin/luci-app-socat.git package/luci-app-socat
 #git clone https://github.com/qianlyun123/luci-app-modem.git package/luci-app-modem
 #git clone https://github.com/Siriling/5G-Modem-Support.git package/5G-Modem-Support
-#git clone https://github.com/linkease/istore.git package/istore
+git clone https://github.com/linkease/istore.git package/istore
 git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns-go
+
+# 410棒子专属插件
+git clone https://github.com/lkiuyu/luci-app-cpu-perf package/luci-app-cpu-perf
+git clone https://github.com/lkiuyu/luci-app-cpu-status package/luci-app-cpu-status
+git clone https://github.com/lkiuyu/luci-app-temp-status package/luci-app-temp-status
+git clone https://github.com/lkiuyu/DbusSmsForwardCPlus package/DbusSmsForwardCPlus
