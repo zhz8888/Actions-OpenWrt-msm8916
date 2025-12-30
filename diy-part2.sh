@@ -11,7 +11,10 @@
 #
 
 # Modify default IP
-# sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.100.1/g' package/base-files/files/bin/config_generate
+
+# Modify default firmware version name
+sed -i "s/DISTRIB_DESCRIPTION=.*/DISTRIB_DESCRIPTION='Built by zhz8888'/g" package/base-files/files/etc/openwrt_release
 
 # Modify default theme
 sed -i 's/luci-theme-material/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
@@ -46,3 +49,16 @@ EOF
 
 # HelmiWrt packages
 git clone --depth=1 https://github.com/Haris131/helmiwrt-packages package/community
+
+# 自定义第三方插件
+git clone --depth=1 https://github.com/chenmozhijin/luci-app-socat.git package/luci-app-socat
+# git clone --depth=1 https://github.com/qianlyun123/luci-app-modem.git package/luci-app-modem
+# git clone --depth=1 https://github.com/Siriling/5G-Modem-Support.git package/5G-Modem-Support
+git clone --depth=1 https://github.com/linkease/istore.git package/istore
+git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go.git package/luci-app-ddns-go
+
+# 410棒子专属插件
+git clone --depth=1 https://github.com/lkiuyu/luci-app-cpu-perf package/luci-app-cpu-perf
+git clone --depth=1 https://github.com/lkiuyu/luci-app-cpu-status package/luci-app-cpu-status
+git clone --depth=1 https://github.com/lkiuyu/luci-app-temp-status package/luci-app-temp-status
+git clone --depth=1 https://github.com/lkiuyu/DbusSmsForwardCPlus package/DbusSmsForwardCPlus
