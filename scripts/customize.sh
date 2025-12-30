@@ -10,5 +10,3 @@
 
 #2. Clear the login password
 sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-settings/files/zzz-default-settings
-
-#3. Replace with JerryKuKu’s Argon
