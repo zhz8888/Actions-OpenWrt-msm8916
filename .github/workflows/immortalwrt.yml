@@ -165,8 +165,8 @@ jobs:
         echo "release_tag=$(date +"%Y.%m.%d-%H%M")" >> $GITHUB_OUTPUT
         touch release.txt
         [ ${UPLOAD_GOFILE} = true && ${{ steps.gofile.outputs.url }} ] && echo "🔗 [GoFile](${{ steps.gofile.outputs.url }})" >> release.txt
-        echo "## Immortalwrt24.10 高通410系列" >> release.txt
-        echo "- 管理地址:192.168.1.1" >> release.txt
+        echo "## Immortalwrt 24.10-SNAPSHOT MSM89xx" >> release.txt
+        echo "- 管理地址:192.168.100.1" >> release.txt
         echo "  默认用户:root" >> release.txt
         echo "  默认密码:空" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
