@@ -60,6 +60,7 @@ jobs:
         large-packages: true
         docker-images: true
         swap-storage: true
+
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
